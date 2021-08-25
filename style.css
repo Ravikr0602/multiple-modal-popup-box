@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -6,8 +7,8 @@
  
 body
 {
- 	font-family: sans-serif;
- 	line-height: 1.5;
+ 	font-family: 'Besley', serif;
+ 	line-height: 1.7;
 }
 
 .services
@@ -24,6 +25,7 @@ body
 {
 	width: 90%;
 	height: auto;
+	margin:auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -37,7 +39,7 @@ body
 	flex-wrap: wrap;
 	width: 100%;
 	margin-top: 10px;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 #title
 {
@@ -75,7 +77,7 @@ body
 }
 .service_main_box .item-inner #modal_title
 {
-	font-size: 20px;
+	font-size: 1.2rem;
 	color: #006c9c;
 	margin-bottom: 30px;
 	position: relative;
@@ -92,8 +94,9 @@ body
 }
 .service_main_box .item-inner #short_desc
 {
-	color:#555555;
-	font-size: 16px;
+	color: white ;
+	letter-spacing: 1px;
+	font-size: 1rem;
 	margin:0 0 30px;
 }
 .service_main_box .item-inner .btn
