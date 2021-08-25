@@ -22,15 +22,13 @@ body
 }
 .container
 {
-	width: 80%;
+	width: 90%;
 	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	background-color: #131419;
-	box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-	5px 5px 15px rgba(0, 0, 0, 0.5);
+	flex-direction: column;
 }
 .title_box{
 	display: flex;
@@ -66,20 +64,24 @@ body
 .service_main_box .item-inner
 {
 	padding: 30px;
+	border-radius: 15px;
 	background: #131419;
 	box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
 	2px 2px 6px rgba(0, 0, 0, 0.8);
 }
-.service_main_box .read_more_btn{
+.service_main_box .read_more_btn
+{
 	display: none;
 }
-.service_main_box .item-inner #modal_title{
+.service_main_box .item-inner #modal_title
+{
 	font-size: 20px;
 	color: #006c9c;
 	margin-bottom: 30px;
 	position: relative;
 }
-.service_main_box .item-inner #modal_title::before{
+.service_main_box .item-inner #modal_title::before
+{
   content: '';
   height: 1px;
   width: 80px;
@@ -88,12 +90,14 @@ body
   left:0;
   bottom:-10px;
 }
-.service_main_box .item-inner #short_desc{
+.service_main_box .item-inner #short_desc
+{
 	color:#555555;
 	font-size: 16px;
 	margin:0 0 30px;
 }
-.service_main_box .item-inner .btn{
+.service_main_box .item-inner .btn
+{
 	font-size: 16px;
 	background-color: transparent;
 	color:  #ff0047;
@@ -101,6 +105,7 @@ body
 	cursor: pointer;
 	outline: none;
 	border: none;
+	border-radius: 7px;
 	background: #131419;
 	box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
 	2px 2px 6px rgba(0, 0, 0, 0.8);
@@ -108,11 +113,12 @@ body
 .service_main_box .item-inner .btn:hover
 {
 	color: #ff0047;
-    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+        box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
                 inset 2px 2px 6px rgba(0, 0, 0, 0.8);
 }	
 
-.popup_box{
+.popup_box
+{
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -123,90 +129,141 @@ body
 	visibility: hidden;
 	opacity:0;
 	transition: all 0.5s ease-in-out;
+
 }
-.popup_box.open{
-  visibility: visible;
+.popup_box.open
+{
+        visibility: visible;
 	opacity:1;	
 }
-.popup-content{
+.popup-content
+{
 	background-color: #ffffff;
 	width: 600px;
+	height: auto;
 	position: absolute;
 	left: 50%;
 	top:50%;
 	transform: translate(-50%,-50%);
 	border-radius: 8px;
+	
 }
 
-.popup-header{
+.popup-header
+{
 	padding: 15px 40px 15px 15px;
 	border-bottom: 1px solid #dddddd;
 }
-.popup-header h3{
+.popup-header h3
+{
 	margin:0;
 	color:#E91E63;
 	font-size: 20px;
+	text-align: center;
 }
-.popup-header .popup_close_icon{
-	position: absolute;
+.popup-header .popup_close_icon
+{
+    position: absolute;
     height: 30px;
     width: 30px;
     text-align: center;
     color: #555555;
-    font-size: 28px;
+    font-size: 1.7rem;
     line-height: 30px;
     right: 5px;
-    top: 5px;
+    top: 5px; 
     cursor: pointer;
 }
-.popup_body{
+.popup_body
+{
 	padding: 15px;
 	max-height: 300px;
 	overflow-y: auto;
 }
-.popup_body img{
+.popup_body img
+{
 	width: 100%;
 	display: block;
 	margin-top: 15px;
 }
-.popup_body p{
-	font-size: 16px;
+.popup_body p
+{
+	font-size: 1rem;
 	color:#555555;
 	margin:0 0 15px;
 }
-.popup-footer{
+.popup-footer
+{
 	padding: 15px;
 	border-top:1px solid #dddddd;
 	text-align: right;
 }
-.popup-footer .btn{
+.popup-footer .btn
+{
 	padding: 8px 15px;
 	border:1px solid #555555;
 	color:#555555;
-	font-size: 16px;
+	font-size: 1rem;
+	box-shadow: 3px 3px 3px gray;
 	background-color: transparent;
 	cursor: pointer;
 	border-radius: 4px;
 }
-.popup-footer .btn:focus{
+.popup-footer .btn:focus
+{
 	outline: none;
 }
 
 
 /*responsive*/
 
-@media(max-width: 767px){
-	.services .service-items .item{
-	  flex:0 0 100%;
-      max-width: 100%;
+@media screen and (max-width: 768px)
+{
+   .services
+  {
+	width: auto;
+	height: auto;
+  }
+   .container
+  {
+	width: 100%;
+	flex-direction: column;
    }
-   .popup_box .popup-content{
+   .service_main_box
+   {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 100%;
+   }
+   .item
+   {
+	display: flex;
+	width: 90%;
+	height: auto;
+	padding: 15px;
+	margin-bottom: 30px;
+   }
+   .services .service-items .item
+   {
+	flex:0 0 100%;
+        max-width: 100%;
+   }
+   .popup_box .popup-content
+   {
    	 width: calc(100% - 30px);
    }
+   .popup-content
+   
+	background-color: #ffffff;
+	width: 600px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top:45%;
+	transform: translate(-50%,-50%);
+	border-radius: 8px;
+   }
 }
-
-
-
-
-
 
