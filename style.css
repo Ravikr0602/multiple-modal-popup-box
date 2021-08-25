@@ -101,7 +101,7 @@ body
 }
 .service_main_box .item-inner .btn
 {
-	font-size: 16px;
+	font-size: 1rem;
 	background-color: transparent;
 	color:  #ff0047;
 	padding: 8px 15px;
@@ -161,7 +161,7 @@ body
 {
 	margin:0;
 	color:#E91E63;
-	font-size: 20px;
+	font-size: 1.2rem;
 	text-align: center;
 }
 .popup-header .popup_close_icon
